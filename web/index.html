@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mcp-hub — audit dashboard</title>
+<meta name="description" content="Audit telemetry for mcp-hub: a permissioned MCP gateway exposing GitHub, Jira and Slack tools behind Keycloak JWT auth, RBAC and an audit log.">
+<link rel="preload" href="fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<!-- Ambient colour fields. Decorative only, hidden from assistive tech. -->
+<div class="glow glow--warm" aria-hidden="true"></div>
+<div class="glow glow--cool" aria-hidden="true"></div>
+<div class="glow glow--deep" aria-hidden="true"></div>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top">mcp&#8209;hub</a>
+  <nav class="nav__links">
+    <a href="#start">Start here</a>
+    <a href="#overview">Overview</a>
+    <a href="#how">How it works</a>
+    <a href="#access">Access</a>
+    <a href="#activity">Activity</a>
+    <a href="#audit">Audit</a>
+    <a href="#connect">Connect</a>
+  </nav>
+  <a class="btn-pill" id="repo-link" href="#" rel="noopener">
+    View source
+    <span class="btn-pill__icon" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+</header>
+
+<main id="top">
+
+  <!-- Filled by app.js only when the data is synthetic. -->
+  <div id="banner" class="banner" hidden></div>
+  <div id="error" class="banner banner--error" hidden></div>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section class="hero" id="overview">
+    <div class="hero__body">
+      <p class="eyebrow">Audit telemetry</p>
+      <h1 class="display"><span class="line"><span>Every call,</span></span><span class="line"><span>accounted&nbsp;for.</span></span></h1>
+      <div class="hero__aside">
+        <p class="hero__lead">Nine GitHub, Jira and Slack tools behind one gateway.</p>
+        <p class="hero__sub"><a href="#start">New here? Take the plain-English tour &rarr;</a></p>
+        <p class="hero__sub">Keycloak JWT on the way in, deny-by-default RBAC, scope allowlists, and an append-only audit row for every call — including the refused ones.</p>
+      </div>
+    </div>
+
+    <ol class="stat-row" id="stat-row" aria-label="Headline metrics">
+      <li class="stat"><span class="stat__index">#01</span><span class="stat__value" id="kpi-calls">—</span><span class="stat__label">Total calls</span></li>
+      <li class="stat"><span class="stat__index">#02</span><span class="stat__value" id="kpi-denied">—</span><span class="stat__label">Refused by policy</span></li>
+      <li class="stat"><span class="stat__index">#03</span><span class="stat__value" id="kpi-p95">—</span><span class="stat__label">Latency p95</span></li>
+      <li class="stat"><span class="stat__index">#04</span><span class="stat__value" id="kpi-users">—</span><span class="stat__label">Distinct callers</span></li>
+    </ol>
+  </section>
+
+  <!-- ── Service strip ──────────────────────────────────────── -->
+  <section class="service-strip" aria-label="Upstream services" data-reveal="zoom">
+    <p class="service-strip__label">Tools exposed across</p>
+    <div class="service-strip__items" id="services"></div>
+  </section>
+
+  <!-- ── Start here (plain English) ─────────────────────────── -->
+  <section class="section" id="start">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--duo">Start here</p>
+      <h2>Give AI a badge,<br>not a master key.</h2>
+      <p class="section-head__lead">AI assistants like Claude can now create tickets, post messages and read code. mcp-hub is the front desk that decides what each person's AI may do, and writes down everything it does. Think of an office building: everyone gets a badge, the badge decides which doors open, and the front desk keeps a log.</p>
+    </div>
+    <div class="pt-steps">
+      <div class="card pt-step" data-reveal><div class="pt-n">1</div><h3>You prove who you are</h3><p>You sign in through Keycloak, a standard login system. The AI never sees your password.</p></div>
+      <div class="card pt-step" data-reveal><div class="pt-n">2</div><h3>Your role sets the limits</h3><p>Viewers can only look. Developers can also create and post. Admins can do bulk jobs. Anything not allowed is refused by default.</p></div>
+      <div class="card pt-step" data-reveal><div class="pt-n">3</div><h3>Every action is checked and logged</h3><p>Requests are limited to an approved list of repos, projects and channels, and every attempt, allowed or refused, goes in the audit log.</p></div>
+    </div>
+    <div class="card" data-reveal>
+      <h3>Try it: what can the AI do for each person?</h3>
+      <p class="card__note">Pick a person, then pick something to ask the AI. No account or setup needed.</p>
+      <div class="pt-who" id="pt-who" role="group" aria-label="Choose a person"></div>
+      <div class="pt-sim">
+        <div class="pt-asks" id="pt-asks" role="group" aria-label="Choose a request"></div>
+        <div class="pt-result" id="pt-result" aria-live="polite"></div>
+      </div>
+      <p class="pt-note" style="margin-top:14px">This runs the same role table and allowlist rules in your browser. The real server enforces them against live GitHub, Jira and Slack. Want the technical version? See <a href="#how">How it works</a>.</p>
+    </div>
+  </section>
+
+  <!-- ── How it works ───────────────────────────────────────── -->
+  <section class="section" id="how">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--duo">How it works</p>
+      <h2>One choke point,<br>every call.</h2>
+      <p class="section-head__lead">Each of the nine tools is a thin wrapper over a single gateway function. A request moves left to right and stops at the first check that refuses it; whatever happens, one redacted row lands in the audit log.</p>
+    </div>
+
+    <figure class="card flow" id="flow" data-reveal="zoom">
+      <figcaption>
+        <h3>Request pipeline</h3>
+        <p class="card__note">The order is the design: authorization runs before validation, so a caller cannot probe the schema of a tool they are not allowed to use.</p>
+      </figcaption>
+
+      <div class="flow__rail" aria-hidden="true">
+        <span class="flow__end">MCP client <small>Bearer JWT</small></span>
+        <span class="flow__wire"></span>
+        <span class="flow__end flow__end--gw">Gateway</span>
+        <span class="flow__wire"></span>
+        <span class="flow__end">GitHub · Jira · Slack</span>
+      </div>
+
+      <ol class="flow__stages" aria-label="Gateway checks, in order">
+        <li class="stage" data-stage="authn">
+          <span class="stage__top"><span class="stage__num">01</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Authenticate</span>
+          <span class="stage__desc">Keycloak JWT: signature, exp, iss, aud, sub</span>
+          <span class="stage__code" title="Returned when this check refuses">UNAUTHENTICATED</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="rate">
+          <span class="stage__top"><span class="stage__num">02</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Rate limit</span>
+          <span class="stage__desc">Per-caller token bucket</span>
+          <span class="stage__code" title="Returned when this check refuses">RATE_LIMITED</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="authz">
+          <span class="stage__top"><span class="stage__num">03</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Authorize</span>
+          <span class="stage__desc">Role must list the tool; deny by default</span>
+          <span class="stage__code" title="Returned when this check refuses">FORBIDDEN</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="validate">
+          <span class="stage__top"><span class="stage__num">04</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Validate</span>
+          <span class="stage__desc">Strict schemas, no ../ and no raw JQL</span>
+          <span class="stage__code" title="Returned when this check refuses">INVALID_ARGUMENTS</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="idem">
+          <span class="stage__top"><span class="stage__num">05</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Idempotency</span>
+          <span class="stage__desc">Writes reserve a key; retries replay</span>
+          <span class="stage__code" title="Returned when this check refuses">IDEMPOTENCY_<wbr>KEY_REUSED</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="scope">
+          <span class="stage__top"><span class="stage__num">06</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Scope</span>
+          <span class="stage__desc">Repo, project or channel must be allowlisted</span>
+          <span class="stage__code" title="Returned when this check refuses">OUT_OF_SCOPE</span>
+          <span class="stage__note" data-note></span>
+        </li>
+        <li class="stage" data-stage="upstream">
+          <span class="stage__top"><span class="stage__num">07</span><span class="stage__mark" aria-hidden="true"></span></span>
+          <span class="stage__name">Upstream</span>
+          <span class="stage__desc">GitHub, Jira or Slack call with retry and backoff</span>
+          <span class="stage__code" title="Returned when this check refuses">UPSTREAM_ERROR</span>
+          <span class="stage__note" data-note></span>
+        </li>
+      </ol>
+
+      <div class="flow__audit" id="flow-audit">
+        <span class="flow__audit-dot" aria-hidden="true"></span>
+        <span><strong>Audit log</strong> — one row per call, passed or refused, secrets redacted before the write</span>
+      </div>
+
+      <div class="sim" id="sim" hidden>
+        <div class="sim__head">
+          <h4>Try a request</h4>
+          <p>Runs in your browser against the role table exported from <code>rbac.py</code>. Nothing leaves this page.</p>
+        </div>
+        <div class="sim__controls">
+          <label>Caller
+            <select id="sim-user">
+              <option value="alice">alice · viewer</option>
+              <option value="bob" selected>bob · developer</option>
+              <option value="carol">carol · admin</option>
+              <option value="none">no token</option>
+            </select>
+          </label>
+          <label>Tool
+            <select id="sim-tool"></select>
+          </label>
+          <label>Situation
+            <select id="sim-case">
+              <option value="normal">Ordinary request</option>
+              <option value="malformed">Malformed arguments</option>
+              <option value="scope">Resource outside the allowlist</option>
+              <option value="retry">Retry of the same write</option>
+              <option value="burst">Burst past the rate limit</option>
+            </select>
+          </label>
+          <button class="btn-pill btn-pill--accent" id="sim-run" type="button">
+            Send request
+            <span class="btn-pill__icon" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="sim__result" id="sim-result" aria-live="polite"></div>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ── Access ─────────────────────────────────────────────── -->
+  <section class="section" id="access">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--duo">Access</p>
+      <h2>Who can do what</h2>
+      <p class="section-head__lead">Roles come from the token. A tool that is not listed for a role is refused, and is not even shown to that caller in <code>tools/list</code>.</p>
+    </div>
+
+    <div class="access-grid">
+      <div class="card" data-reveal="left">
+        <h3>Role matrix</h3>
+        <p class="card__note" id="matrix-note">Select a cell to run that request through the pipeline.</p>
+        <div class="table-scroll">
+          <table class="matrix" id="matrix"><thead></thead><tbody></tbody></table>
+        </div>
+      </div>
+
+      <div class="card states" data-reveal="right">
+        <h3>Idempotent writes</h3>
+        <p class="card__note">State kept per key, so a retry after a timeout never creates a duplicate.</p>
+        <div class="states__row" role="img" aria-label="A key moves from absent to pending when a write begins, and from pending to done when it completes.">
+          <span class="state">absent</span>
+          <span class="edge"><span>begin</span></span>
+          <span class="state state--mid">pending</span>
+          <span class="edge"><span>complete</span></span>
+          <span class="state state--done">done</span>
+        </div>
+        <ul class="states__rules">
+          <li><span class="rule__when">Handler fails</span><span class="rule__then">key released, safe to retry</span></li>
+          <li><span class="rule__when">Same key, same arguments</span><span class="rule__then">stored result replayed, upstream untouched</span></li>
+          <li><span class="rule__when">Same key, different arguments</span><span class="rule__then"><code>IDEMPOTENCY_KEY_REUSED</code></span></li>
+          <li><span class="rule__when">Identical request still running</span><span class="rule__then"><code>DUPLICATE_IN_PROGRESS</code></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <!-- ── Connect ────────────────────────────────────────────── -->
+  <section class="section" id="connect">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--duo">Connect</p>
+      <h2>Connect Claude<br>in three steps.</h2>
+      <p class="section-head__lead">Sign in, copy one command, paste it into your terminal. Claude then works with your role's permissions and nothing more.</p>
+    </div>
+    <div class="card" data-reveal>
+      <div id="pt-out">
+        <ol class="pt-list">
+          <li><span><b>Sign in</b> with your work account.</span></li>
+          <li><span><b>Copy</b> the connect command that appears here.</span></li>
+          <li><span><b>Paste it</b> into a terminal with Claude Code installed, then ask something like &ldquo;list open issues in the sandbox repo&rdquo;.</span></li>
+        </ol>
+        <button class="btn-pill btn-pill--accent pt-btn" id="pt-login" type="button">Sign in</button>
+        <p class="pt-note" style="margin-top:14px">Demo accounts: <code>alice</code> (viewer), <code>bob</code> (developer), <code>carol</code> (admin). Sign-in needs the local login server, started with <code>docker compose up -d</code>.</p>
+        <div class="pt-warn" id="pt-err" hidden></div>
+      </div>
+      <div id="pt-in" hidden>
+        <div class="pt-me"><strong id="pt-name"></strong><span class="pt-pill" id="pt-role"></span></div>
+        <p class="pt-note" id="pt-count"></p>
+        <p style="margin:16px 0 0"><b>Your connect command</b> <span class="pt-note">(token hidden here; the copy button copies the real one)</span></p>
+        <div class="pt-cmd" id="pt-cmd"></div>
+        <div class="pt-row"><button class="btn-pill btn-pill--accent pt-btn" id="pt-copy" type="button">Copy command</button><button class="btn-pill pt-btn" id="pt-logout" type="button">Sign out</button></div>
+        <p class="pt-note" style="margin-top:12px" id="pt-timer"></p>
+      </div>
+    </div>
+  </section>
+
+<!-- ── Editorial ──────────────────────────────────────────── -->
+  <section class="editorial" id="activity">
+    <div data-reveal="left">
+      <p class="eyebrow">Behind the numbers</p>
+      <h2>What the gateway<br>actually did</h2>
+    </div>
+    <div class="editorial__text" data-reveal="right">
+      <p class="editorial__lead">Every tool call is authenticated, rate limited, authorised and validated before a single upstream request goes out.</p>
+      <p>Refusals are not failures — they are the control plane doing its job, and they are recorded with the same detail as successes.</p>
+    </div>
+  </section>
+
+  <!-- ── Charts ─────────────────────────────────────────────── -->
+  <section class="chart-grid">
+    <figure class="card card--wide" data-reveal="zoom">
+      <figcaption>
+        <h3>Calls over time</h3>
+        <p class="card__note" id="timeline-note">Outcome per bucket</p>
+      </figcaption>
+      <div class="chart-box chart-box--tall"><canvas id="chart-timeline"></canvas></div>
+    </figure>
+
+    <figure class="card" data-reveal="left">
+      <figcaption>
+        <h3>Calls by tool</h3>
+        <p class="card__note">All nine tools, most used first</p>
+      </figcaption>
+      <div class="chart-box"><canvas id="chart-tools"></canvas></div>
+    </figure>
+
+    <figure class="card" data-reveal="right">
+      <figcaption>
+        <h3>Why calls were refused</h3>
+        <p class="card__note">Error code on non-OK calls</p>
+      </figcaption>
+      <div class="chart-box"><canvas id="chart-codes"></canvas></div>
+      <p class="empty" id="codes-empty" hidden>No refusals or errors recorded.</p>
+    </figure>
+  </section>
+
+  <!-- ── Tables ─────────────────────────────────────────────── -->
+  <section class="tables" id="audit">
+    <div class="card" data-reveal>
+      <h3>Per-tool latency</h3>
+      <p class="card__note">The same numbers the charts are drawn from.</p>
+      <div class="table-scroll">
+        <table id="table-tools">
+          <thead><tr><th>Tool</th><th class="num">Calls</th><th class="num">Errors</th><th class="num">p50 ms</th><th class="num">p95 ms</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" data-reveal>
+      <h3>Recent calls</h3>
+      <p class="card__note">Arguments pass through the redactor <em>before</em> they are written to the log.</p>
+      <div class="table-filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="denied">Refused</button>
+        <button class="chip" data-filter="error">Errors</button>
+      </div>
+      <div class="table-scroll table-scroll--bounded">
+        <table id="table-recent">
+          <thead><tr><th>Time (UTC)</th><th>User</th><th>Role</th><th>Tool</th><th>Status</th><th class="num">ms</th><th>Arguments</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span id="generated">—</span>
+  <span class="foot__sep">·</span>
+  <span>mcp-hub — MCP gateway with Keycloak auth, RBAC and audit logging</span>
+</footer>
+
+<!-- Vendored, not CDN: the page works offline and pulls no third-party requests. -->
+<script src="vendor/chart.umd.js"></script>
+<script src="app.js"></script>
+<script src="portal.js"></script>
+</body>
+</html>

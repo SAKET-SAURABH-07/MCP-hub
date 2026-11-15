@@ -1,0 +1,48 @@
+name: Deploy dashboard to GitHub Pages
+
+# Publishes web/ as-is. The committed web/data/metrics.json is what the page shows,
+# so the snapshot you publish is the snapshot you generated and reviewed locally:
+#   python scripts/export_metrics.py --db data/audit.db --source live
+# Audit rows are redacted at write time, but review the file before committing it —
+# usernames, repo names and Jira keys are real once you run against real accounts.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish; queue at most one behind it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fail if the dashboard has no data to show
+        run: |
+          test -f web/data/metrics.json \
+            || { echo "::error::web/data/metrics.json is missing. Run scripts/export_metrics.py and commit it."; exit 1; }
+          python3 -c "import json,sys; json.load(open('web/data/metrics.json'))" \
+            || { echo "::error::web/data/metrics.json is not valid JSON."; exit 1; }
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,41 @@
+{
+  "realm": "mcp-hub",
+  "enabled": true,
+  "sslRequired": "none",
+  "accessTokenLifespan": 900,
+  "roles": {
+    "realm": [
+      { "name": "viewer", "description": "Read-only tools" },
+      { "name": "developer", "description": "Read and write tools" },
+      { "name": "admin", "description": "Everything incl. bulk import" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "mcp-client",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "redirectUris": ["http://localhost:*", "http://127.0.0.1:*"],
+      "webOrigins": ["+"],
+      "protocolMappers": [
+        {
+          "name": "mcp-hub-audience",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "config": {
+            "included.custom.audience": "mcp-hub",
+            "id.token.claim": "false",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    { "username": "alice", "enabled": true, "email": "alice@example.com", "emailVerified": true, "firstName": "Alice", "lastName": "Viewer", "credentials": [{ "type": "password", "value": "alice-pw", "temporary": false }], "realmRoles": ["viewer"] },
+    { "username": "bob", "enabled": true, "email": "bob@example.com", "emailVerified": true, "firstName": "Bob", "lastName": "Developer", "credentials": [{ "type": "password", "value": "bob-pw", "temporary": false }], "realmRoles": ["developer"] },
+    { "username": "carol", "enabled": true, "email": "carol@example.com", "emailVerified": true, "firstName": "Carol", "lastName": "Admin", "credentials": [{ "type": "password", "value": "carol-pw", "temporary": false }], "realmRoles": ["admin"] }
+  ]
+}

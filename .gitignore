@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.db
+.coverage
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+dist/
+*.tmp
+# NOTE: web/data/metrics.json is intentionally NOT ignored — GitHub Pages serves it.
+evals/results.json

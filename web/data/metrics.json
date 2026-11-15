@@ -1,0 +1,2522 @@
+{
+  "generated_at": "2026-11-15T05:54:49Z",
+  "source": "demo",
+  "metrics": {
+    "total_calls": 420,
+    "unique_users": 3,
+    "by_status": {
+      "ok": 305,
+      "denied": 96,
+      "error": 19
+    },
+    "denied": 96,
+    "denied_rate": 0.2286,
+    "by_error_code": {
+      "FORBIDDEN": 96,
+      "UPSTREAM_ERROR": 19
+    },
+    "by_role": {
+      "admin": 128,
+      "developer": 145,
+      "viewer": 147
+    },
+    "timeline": [
+      {
+        "bucket": "2026-11-05T12:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-05T13:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T14:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T15:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T16:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-05T17:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T18:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T19:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T20:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T21:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-05T22:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-05T23:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T00:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T01:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T02:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-06T03:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T04:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T05:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T06:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T07:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-06T08:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T09:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T10:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T11:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T12:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-06T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T14:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T15:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T17:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-06T18:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T19:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T20:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T21:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-06T22:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-06T23:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T00:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T01:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T02:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T03:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-07T04:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T05:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T06:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T07:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T08:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-07T09:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T10:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T11:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T13:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-07T14:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T15:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T17:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T18:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-07T19:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T20:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T21:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T22:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-07T23:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-08T00:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T01:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T02:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T03:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T04:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-08T05:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T06:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T07:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T08:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T09:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-08T10:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T11:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T14:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-08T15:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T16:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T17:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T18:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T19:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-08T20:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T21:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T22:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-08T23:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T00:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-09T01:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T02:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T03:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T04:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T05:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-09T06:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T07:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T08:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T09:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T10:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-09T11:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T14:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T15:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-09T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T17:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T18:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T19:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T20:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-09T21:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T22:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-09T23:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T00:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T01:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-10T02:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T03:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T04:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T05:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T06:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-10T07:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T08:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T09:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T10:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T11:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-10T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T13:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T14:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T15:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T16:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-10T17:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T18:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T19:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T20:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T21:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-10T22:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-10T23:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T00:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T01:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T02:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-11T03:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T04:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T05:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T06:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T07:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-11T08:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T09:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T10:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T11:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T12:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-11T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T14:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T15:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T16:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T17:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-11T18:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T19:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T20:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T21:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-11T22:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-11T23:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T00:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T01:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T02:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T03:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-12T04:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T05:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T06:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T07:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T08:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-12T09:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T10:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T11:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T13:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-12T14:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T15:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T17:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T18:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-12T19:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T20:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T21:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T22:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-12T23:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-13T00:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T01:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T02:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T03:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T04:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-13T05:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T06:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T07:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T08:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T09:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-13T10:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T11:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T12:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T14:00Z",
+        "ok": 0,
+        "denied": 1,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-13T15:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T17:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T18:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T19:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-13T20:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T21:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T22:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-13T23:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 1,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T00:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-14T01:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T02:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T03:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T04:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T05:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-14T06:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T07:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T08:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T09:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T10:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-14T11:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T12:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T13:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T14:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T15:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-14T16:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T17:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T18:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T19:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T20:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-14T21:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T22:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-14T23:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-15T00:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-15T01:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      },
+      {
+        "bucket": "2026-11-15T02:00Z",
+        "ok": 0,
+        "denied": 2,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-15T03:00Z",
+        "ok": 2,
+        "denied": 0,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-15T04:00Z",
+        "ok": 1,
+        "denied": 1,
+        "error": 0,
+        "total": 2
+      },
+      {
+        "bucket": "2026-11-15T05:00Z",
+        "ok": 1,
+        "denied": 0,
+        "error": 0,
+        "total": 1
+      }
+    ],
+    "ok_latency_p50_ms": 315.45,
+    "ok_latency_p95_ms": 573.53,
+    "tools": {
+      "bulk_create_issues_from_csv": {
+        "calls": 44,
+        "errors": 27,
+        "p50_ms": 429.7,
+        "p95_ms": 586.7
+      },
+      "github_create_issue": {
+        "calls": 48,
+        "errors": 14,
+        "p50_ms": 282.93,
+        "p95_ms": 573.53
+      },
+      "github_get_pull_request": {
+        "calls": 45,
+        "errors": 7,
+        "p50_ms": 283.56,
+        "p95_ms": 587.22
+      },
+      "github_list_issues": {
+        "calls": 46,
+        "errors": 2,
+        "p50_ms": 305.74,
+        "p95_ms": 556.77
+      },
+      "jira_create_issue": {
+        "calls": 55,
+        "errors": 32,
+        "p50_ms": 289.58,
+        "p95_ms": 518.34
+      },
+      "jira_search_issues": {
+        "calls": 50,
+        "errors": 2,
+        "p50_ms": 328.68,
+        "p95_ms": 581.83
+      },
+      "jira_transition_issue": {
+        "calls": 43,
+        "errors": 14,
+        "p50_ms": 266.67,
+        "p95_ms": 542.33
+      },
+      "slack_list_channels": {
+        "calls": 46,
+        "errors": 2,
+        "p50_ms": 328.48,
+        "p95_ms": 576.47
+      },
+      "slack_post_message": {
+        "calls": 43,
+        "errors": 15,
+        "p50_ms": 430.67,
+        "p95_ms": 578.08
+      }
+    },
+    "first_ts": 1793882088.555365,
+    "last_ts": 1794720088.555365
+  },
+  "recent": [
+    {
+      "ts": 1794720088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 499.91360351513265,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "128b2f330c5c7fd0"
+    },
+    {
+      "ts": 1794718088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 160.23098126797055,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "81e74ef5e8e25d94"
+    },
+    {
+      "ts": 1794716088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_transition_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 174.77128007113402,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "11e20b8f6b0d549b"
+    },
+    {
+      "ts": 1794714088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_transition_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 570.571832396193,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "1fb17c2390c192cf"
+    },
+    {
+      "ts": 1794712088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "bulk_create_issues_from_csv",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 586.7028591320352,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "0cb1e29c658cda14"
+    },
+    {
+      "ts": 1794710088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 202.18120034573872,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "2217beaddbc496cb"
+    },
+    {
+      "ts": 1794708088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 212.74982149708325,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "922766581e27a1c0"
+    },
+    {
+      "ts": 1794706088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 145.20777500080038,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "a38fd547923a7369"
+    },
+    {
+      "ts": 1794704088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 356.0462441546965,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "1012f037b64ce422"
+    },
+    {
+      "ts": 1794702088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 475.2481139892519,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "6d76b07e881ed162"
+    },
+    {
+      "ts": 1794700088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 140.6693797665602,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "cb5c74273f98e277"
+    },
+    {
+      "ts": 1794698088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 334.1100421344128,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "4cdd2055930d6eaf"
+    },
+    {
+      "ts": 1794696088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 106.11683582277878,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "12bd4acefaecbd38"
+    },
+    {
+      "ts": 1794694088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 313.81933626645116,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "eeeacbe226e87555"
+    },
+    {
+      "ts": 1794692088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 360.894526555335,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "8ede0d7ac3baea9e"
+    },
+    {
+      "ts": 1794690088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 364.74131439819564,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "7f26144b98289fcd"
+    },
+    {
+      "ts": 1794688088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 305.4950689550009,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "451abd81f1d69ed6"
+    },
+    {
+      "ts": 1794686088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 402.3921585354945,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "4f426dcbb394fb36"
+    },
+    {
+      "ts": 1794684088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 414.44552089514536,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "e315128862c33a4f"
+    },
+    {
+      "ts": 1794682088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 316.4680769519096,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "1df9fd789c653938"
+    },
+    {
+      "ts": 1794680088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 178.664306870272,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "bd0561e6211c70cf"
+    },
+    {
+      "ts": 1794678088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 347.68634912066096,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "66d2287672fdf202"
+    },
+    {
+      "ts": 1794676088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_transition_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 195.91579612778241,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "8cdb305fdd2e1609"
+    },
+    {
+      "ts": 1794674088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 169.220844540862,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "f52ddf5d616499c9"
+    },
+    {
+      "ts": 1794672088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 46.75531351252736,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "3bbbe9eaa8948c89"
+    },
+    {
+      "ts": 1794670088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 274.6100406301837,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "254b0c4e010c4759"
+    },
+    {
+      "ts": 1794668088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 328.6752025196359,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "dbf4a8b2b0c4312d"
+    },
+    {
+      "ts": 1794666088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "bulk_create_issues_from_csv",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 573.0562836656525,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "c7ac1491def88334"
+    },
+    {
+      "ts": 1794664088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "slack_post_message",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 97.98077247778158,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "64e50cad66237a04"
+    },
+    {
+      "ts": 1794662088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_transition_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 156.9073838498521,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "fc132d0d113db17d"
+    },
+    {
+      "ts": 1794660088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 69.44233817854949,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "99c94309570dc195"
+    },
+    {
+      "ts": 1794658088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_get_pull_request",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 383.6928672662414,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "5d158a2ff2ee4e45"
+    },
+    {
+      "ts": 1794656088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 181.26434367196327,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "a268aa872607679d"
+    },
+    {
+      "ts": 1794654088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 313.31811305983007,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "d953ee261d87cec3"
+    },
+    {
+      "ts": 1794652088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 97.22506537897434,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "24e4e25a15fc899e"
+    },
+    {
+      "ts": 1794650088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 329.14733061890007,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "29540a6eb12aa1f6"
+    },
+    {
+      "ts": 1794648088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 426.4378480924409,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "2587be6b5c9bcf35"
+    },
+    {
+      "ts": 1794646088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 400.0335651894064,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "fa7f0eab4c4f9b06"
+    },
+    {
+      "ts": 1794644088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 548.6247844513025,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "5de0099784b5a818"
+    },
+    {
+      "ts": 1794642088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 224.61239722674694,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "80b0c08bc7702420"
+    },
+    {
+      "ts": 1794640088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 454.32889141039993,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "66934036d17e4497"
+    },
+    {
+      "ts": 1794638088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 56.22888441516462,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "bb2313f55b06258e"
+    },
+    {
+      "ts": 1794636088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "jira_create_issue",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 148.44116976717322,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "4259405278e4b98d"
+    },
+    {
+      "ts": 1794634088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 593.3013125936017,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "b91ee9e5efe09f07"
+    },
+    {
+      "ts": 1794632088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 150.15545151481766,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "785729763a12917c"
+    },
+    {
+      "ts": 1794630088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 510.6438952764023,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "9c3a23cde67a9b75"
+    },
+    {
+      "ts": 1794628088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 409.9279641147407,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "d5ab8b4d15b40aeb"
+    },
+    {
+      "ts": 1794626088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_list_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 481.91584137135476,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "6f15b6ad2db3997f"
+    },
+    {
+      "ts": 1794624088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 261.66955723889095,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "b8c9817af8be8831"
+    },
+    {
+      "ts": 1794622088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 111.14148568680403,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "fe3c9c8f2b855c1f"
+    },
+    {
+      "ts": 1794620088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 502.84586797421673,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "9c9011ef256badf9"
+    },
+    {
+      "ts": 1794618088.555365,
+      "username": "bob",
+      "roles": "developer",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 51.982137620270564,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "2188287e8c5c715f"
+    },
+    {
+      "ts": 1794616088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "github_create_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 282.93328458419194,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "23a5ef88ef02090b"
+    },
+    {
+      "ts": 1794614088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "github_list_issues",
+      "status": "error",
+      "error_code": "UPSTREAM_ERROR",
+      "latency_ms": 320.6506751082991,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "4affdcd13678bc8d"
+    },
+    {
+      "ts": 1794612088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 113.40125884195066,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "d58dcdb46b446806"
+    },
+    {
+      "ts": 1794610088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_search_issues",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 496.42633815412364,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "9556585ea997f351"
+    },
+    {
+      "ts": 1794608088.555365,
+      "username": "carol",
+      "roles": "admin",
+      "tool": "jira_transition_issue",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 113.22742505238934,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "806c10b5e0cfab4c"
+    },
+    {
+      "ts": 1794606088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_post_message",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 528.7711352591957,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "04c9d78d82b33599"
+    },
+    {
+      "ts": 1794604088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "bulk_create_issues_from_csv",
+      "status": "denied",
+      "error_code": "FORBIDDEN",
+      "latency_ms": 123.8893915453118,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "cc966f46c6aa7d55"
+    },
+    {
+      "ts": 1794602088.555365,
+      "username": "alice",
+      "roles": "viewer",
+      "tool": "slack_list_channels",
+      "status": "ok",
+      "error_code": null,
+      "latency_ms": 74.58296077363191,
+      "args_json": "{\"demo\": true}",
+      "detail": null,
+      "request_id": "8e752fdf1ece615d"
+    }
+  ],
+  "rbac": {
+    "viewer": [
+      "github_get_pull_request",
+      "github_list_issues",
+      "jira_search_issues",
+      "slack_list_channels"
+    ],
+    "developer": [
+      "github_create_issue",
+      "github_get_pull_request",
+      "github_list_issues",
+      "jira_create_issue",
+      "jira_search_issues",
+      "jira_transition_issue",
+      "slack_list_channels",
+      "slack_post_message"
+    ],
+    "admin": [
+      "bulk_create_issues_from_csv",
+      "github_create_issue",
+      "github_get_pull_request",
+      "github_list_issues",
+      "jira_create_issue",
+      "jira_search_issues",
+      "jira_transition_issue",
+      "slack_list_channels",
+      "slack_post_message"
+    ]
+  },
+  "tools": {
+    "bulk_create_issues_from_csv": {
+      "description": "Admin only. Create many GitHub or Jira issues from CSV text (dry run by default).",
+      "write": true,
+      "idempotent": false
+    },
+    "github_create_issue": {
+      "description": "Create an issue in an allowlisted GitHub repository.",
+      "write": true,
+      "idempotent": true
+    },
+    "github_get_pull_request": {
+      "description": "Get summary details of a pull request.",
+      "write": false,
+      "idempotent": false
+    },
+    "github_list_issues": {
+      "description": "List issues in an allowlisted GitHub repository.",
+      "write": false,
+      "idempotent": false
+    },
+    "jira_create_issue": {
+      "description": "Create an issue in an allowlisted Jira project.",
+      "write": true,
+      "idempotent": true
+    },
+    "jira_search_issues": {
+      "description": "Search issues in an allowlisted Jira project.",
+      "write": false,
+      "idempotent": false
+    },
+    "jira_transition_issue": {
+      "description": "Move a Jira issue to another workflow status.",
+      "write": true,
+      "idempotent": true
+    },
+    "slack_list_channels": {
+      "description": "List allowlisted Slack channels.",
+      "write": false,
+      "idempotent": false
+    },
+    "slack_post_message": {
+      "description": "Post a message to an allowlisted Slack channel.",
+      "write": true,
+      "idempotent": true
+    }
+  }
+}
