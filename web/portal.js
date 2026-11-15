@@ -76,7 +76,9 @@
   // ---- Sign-in: browser login (authorization code + PKCE) ----
   const b64 = (b) => btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
   const REDIR = location.origin + location.pathname;
+  const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
   async function login() {
+    if (!LOCAL) return;
     const v = b64(crypto.getRandomValues(new Uint8Array(32))), st = b64(crypto.getRandomValues(new Uint8Array(16)));
     sessionStorage.setItem("pkce", JSON.stringify({ v, st }));
     const ch = b64(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(v)));
@@ -131,5 +133,11 @@
     try { await navigator.clipboard.writeText(full); e.target.textContent = "Copied ✓"; } catch { e.target.textContent = "Copy blocked by browser"; }
     setTimeout(() => (e.target.textContent = "Copy command"), 2000);
   };
+  if (!LOCAL) {
+    $("pt-login").disabled = true;
+    $("pt-login").textContent = "Sign in (local setup only)";
+    $("pt-err").textContent = "You're viewing the hosted demo. Live sign-in is switched off here because the login server (Keycloak) runs on a developer's own computer. Use the simulator above, or clone the repo and run it locally to try real sign-in.";
+    $("pt-err").hidden = false;
+  }
   render(); finishLogin();
 })();
