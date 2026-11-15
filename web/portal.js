@@ -134,9 +134,9 @@
     setTimeout(() => (e.target.textContent = "Copy command"), 2000);
   };
   if (!LOCAL) {
-    $("pt-login").disabled = true;
-    $("pt-login").textContent = "Sign in (local setup only)";
-    $("pt-err").textContent = "You're viewing the hosted demo. Live sign-in is switched off here because the login server (Keycloak) runs on a developer's own computer. Use the simulator above, or clone the repo and run it locally to try real sign-in.";
+    $("pt-login").textContent = "See how to run it locally";
+    $("pt-login").onclick = () => window.open("https://github.com/SAKET-SAURABH-07/MCP-hub#quick-start", "_blank", "noopener");
+    $("pt-err").textContent = "You're viewing the hosted demo. Live sign-in is switched off here because the login server (Keycloak) runs on a developer's own computer. Use the simulator above, or click the button to see how to run it locally and try real sign-in.";
     $("pt-err").hidden = false;
   }
   render(); finishLogin();
